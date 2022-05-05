@@ -1,5 +1,0 @@
-#!/bin/sh
-
-export PATH=$PATH:$HOME
-export PYTHONPATH=$PYTHONPATH:$HOME
-cd $HOME
