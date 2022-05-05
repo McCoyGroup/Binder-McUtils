@@ -1,5 +1,8 @@
 #!/bin/sh
 
+cd /tmp
+git clone https://github.com/McCoyGroup/McUtils.git
 python -c 'from McUtils.Jupyter import JHTML; JHTML.load()'
 
+cd /home
 jupyter serverextension enable --py nbgitpuller --sys-prefix
