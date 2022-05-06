@@ -1,8 +1,16 @@
 #!/bin/sh
 
-cd /tmp
-git clone https://github.com/McCoyGroup/McUtils.git
-python -c 'from McUtils.Jupyter import JHTML; JHTML.load()'
 
 cd /home
+
+if [[ ! -d McUtils ]]; then
+    git clone https://github.com/McCoyGroup/McUtils.git
+fi
+
+if [[ ! -d Psience ]]; then
+    git clone https://github.com/McCoyGroup/Psience.git
+fi
+
+python -c 'from McUtils.Jupyter import JHTML; JHTML.load()'
+
 jupyter serverextension enable --py nbgitpuller --sys-prefix
