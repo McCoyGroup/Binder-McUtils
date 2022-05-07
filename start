@@ -1,7 +1,7 @@
 #!/bin/sh
 
-export PATH=$PATH:$HOME
-export PYTHONPATH=$PYTHONPATH:$HOME
+export PATH=$PATH:$HOME:/home
+export PYTHONPATH=$PYTHONPATH:$HOME:/home
 cd $HOME
 
 exec "$@"
