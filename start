@@ -4,4 +4,15 @@ export PATH=$PATH:$HOME:/home
 export PYTHONPATH=$PYTHONPATH:$HOME:/home
 cd $HOME
 
+
+git clone https://github.com/McCoyGroup/Peeves.git
+if [[ ! -d McUtils ]]; then
+  git clone https://github.com/McCoyGroup/McUtils.git
+fi
+if [[ ! -d Psience ]]; then
+  git clone https://github.com/McCoyGroup/Psience.git
+fi
+
+python -c 'from McUtils.Jupyter import JHTML; JHTML.load()'
+
 exec "$@"
